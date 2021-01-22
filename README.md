@@ -29,3 +29,17 @@ $ pipenv shell
   - https://flask-marshmallow.readthedocs.io/en/latest/
 - Marshmallow-sqlalchemy
   - https://marshmallow-sqlalchemy.readthedocs.io/en/latest/
+
+## Fix Import Warnings
+
+> With `VSCode` and `Pylance` you might need the following settings in order to let your `linter` and `code editor` know about your environment.
+
+> Easiest way is to make sure you have 'vscode' open into the current projects root directory. For instance this projects 'root'
+
+> Hop into your `pipenv shell` and copy the `path` where your `virtualenv` is located and apply it to a `.vscode/settings.json` file in the root of the project. I have provided an `.vscode/example.settings.json` for your referance.
+
+```json
+{
+  "python.pythonPath": "/YOUR_VIRTUALENV_PATH/bin/python3"
+}
+```
