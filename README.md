@@ -19,6 +19,52 @@ $ pipenv shell
 (hello_flask) python app.py
 ```
 
+## Database Setup
+
+- If you need to setup your database you will need to do the following inside a python repl while in your pipenv shell.
+  - If you get a warning about `SQLALCHEMY_TRACK_MODIFICATIONS` it is ok.
+
+```
+>>> from fileName import db
+>>> db.create_all()
+```
+
+## Routes
+
+### GET ALL GUIDES
+
+- url: localhost:5000/guides
+
+### GET SINGLE GUIDE
+
+- url: localhost:5000/guides/ID
+
+### POST
+
+- url: localhost:5000/guide
+
+```json
+body: {
+	"title": "New York Pizza",
+	"content": "$12"
+}
+```
+
+### PUT
+
+- url: localhost:5000/guide/ID
+
+```json
+body: {
+	"title": "New York Pizza",
+	"content": "$12"
+}
+```
+
+### DELETE
+
+- url: localhost:5000/guide/ID
+
 ## Dependencies
 
 - Flask
